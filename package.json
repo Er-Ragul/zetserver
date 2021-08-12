@@ -1,0 +1,16 @@
+{
+  "name": "thezet",
+  "version": "1.0.0",
+  "description": "The Game",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Ragul.H B.Tech Information Technology",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "socket.io": "^4.1.3"
+  }
+}
