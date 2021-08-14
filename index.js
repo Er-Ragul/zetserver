@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
                 io.to(uid).emit('entry-success')
                 console.log('Joined Room : ', roomid, ' & Player Name : ', Rooms[roomid])
 
-                if(clients.size === 5){
+                if(clients.size === 4){
                     console.log('Players size : ', clients.size)
                     var rivals = Rooms[roomid]
                     console.log(roomid, ' has reached 4 users')
@@ -101,7 +101,7 @@ io.on('connection', (socket) => {
         for(i=0; i<availableRooms.length; i++){
             const clients_g = io.sockets.adapter.rooms.get(availableRooms[i])
             try {
-                if(clients_g.size < 5){
+                if(clients_g.size < 4){
                     io.in(availableRooms[i]).emit('player-not-exist');
                 }
             }
