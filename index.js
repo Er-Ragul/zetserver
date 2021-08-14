@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
                 io.to(uid).emit('entry-success')
                 console.log('Joined Room : ', roomid, ' & Player Name : ', Rooms[roomid])
 
-                if(clients.size === 4){
+                if(clients.size === 5){
                     console.log('Players size : ', clients.size)
                     var rivals = Rooms[roomid]
                     console.log(roomid, ' has reached 4 users')
